@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install Android Build Tools
+      run: |
+        sdkmanager "build-tools;31.0.0"
     - name: Checkout code
       uses: actions/checkout@v4
 
